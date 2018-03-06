@@ -15,11 +15,17 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+    @media screen and (max-width: 415px) {
+      margin-right:-1em;
+    }
   }
   .jumboTron{
     padding-top:60px;
     background-image: linear-gradient(#002e4b, #0081b6);
     position:relative;
+    @media screen and (max-width: 415px) {
+      padding-top:0px;
+    }
   }
   body {
     background-image: linear-gradient(45deg, #808080 25%, transparent 25%), linear-gradient(-45deg, #808080 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #808080 75%), linear-gradient(-45deg, transparent 75%, #808080 75%);
@@ -65,6 +71,14 @@
   }
 
   table{
+        th{
+        border: 1px solid lightgray;
+          @media screen and (max-width: 415px) {
+          &:nth-child(4){
+              display:none!important;
+            }
+          }
+        }
         tbody{
           tr{
             &:hover, &:focus, &:active{
@@ -72,9 +86,7 @@
               cursor:pointer;
             }
         }
-        th{
-          border: 1px solid lightgray;
-        }
+
         td{
           border: 1px solid #e9ecef;
         }
@@ -137,6 +149,9 @@
     #first_name{
       width: 49%;
       display: inline-block;
+      @media screen and (max-width: 415px) {
+        width: 48%;
+      }
     }
     #last_name{
       width: 50%;

@@ -15,10 +15,22 @@ section:before, section:after {
   color: #2c3e50;
 }
 
+@media screen and (max-width: 415px) {
+  #app {
+    margin-right: -1em;
+  }
+}
+
 .jumboTron {
   padding-top: 60px;
   background-image: linear-gradient(#002e4b, #0081b6);
   position: relative;
+}
+
+@media screen and (max-width: 415px) {
+  .jumboTron {
+    padding-top: 0px;
+  }
 }
 
 body {
@@ -70,13 +82,19 @@ section:after {
   right: 0;
 }
 
+table th {
+  border: 1px solid lightgray;
+}
+
+@media screen and (max-width: 415px) {
+  table th:nth-child(4) {
+    display: none !important;
+  }
+}
+
 table tbody tr:hover, table tbody tr:focus, table tbody tr:active {
   background-color: rgba(254, 241, 2, 0.75) !important;
   cursor: pointer;
-}
-
-table tbody th {
-  border: 1px solid lightgray;
 }
 
 table tbody td {
@@ -129,6 +147,12 @@ fieldset.b-form-group.form-group {
 .newCustomer #first_name, .editCustomer #first_name {
   width: 49%;
   display: inline-block;
+}
+
+@media screen and (max-width: 415px) {
+  .newCustomer #first_name, .editCustomer #first_name {
+    width: 48%;
+  }
 }
 
 .newCustomer #last_name, .editCustomer #last_name {
