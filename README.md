@@ -31,6 +31,10 @@ http://localhost:3000/customer/generate-fake-data
 ### Description:
 I chose to make this project in Vue, Express, and MongoDB for the purpose of being as close as I can to the development stack I know Ethika is using currently. As to reintroduce myself to the latest changes of Vue and Express. I chose to use the bootstrap dependency for UI as to speed up the process and provide a consistent responsive UI. 
 
+### Cons:
+* Known issue when searching it will return all the results non-paginated
+* Known issue after search is cleared still showing search results
+
 ### Pros:
 My customer validation is happening both on the component vue level (front) and in express router (back-middle) here are some of the validation that’s happening:
 * Making required fields have a min value length > 3
