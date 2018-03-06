@@ -18,6 +18,11 @@ Once unzipped make sure MongoDB service is running
 Open terminal and cd to the folder where you unzipped the contents
 Type ‘Npm Start’
 
+### Additional setup for testing:
+ **more details coming soon**
+I've included faker.js to create user data go to http://localhost:3000/customer/generate-fake-data
+ 90 records will be created
+
 ### Description:
 I chose to make this project in Vue, Express, and MongoDB for the purpose of being as close as I can to the development stack I know Ethika is using currently. As to reintroduce myself to the latest changes of Vue and Express. I chose to use the bootstrap dependency for UI as to speed up the process and provide a consistent responsive UI. 
 
