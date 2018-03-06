@@ -49,3 +49,9 @@ When Creating a customer record I am checking to see if there is a duplicate rec
 When looking up a customer record I only using a single string parameter to find matches
 * I am using an computed observable of when a user types into the input field it will send a get request
 * In the router it will match any field whether it's first_name, last_name, phone or email with that of the query
+
+When looking up customer records I am limiting the view at a reasonable level by:
+* Making the view only show 15 records at a time (exception being on search)
+* API call through router to only show 15 records at a time and also sort the records by last_name, email or date and descending or ascending so the response is very fast and only showing the user what they can see at one time
+* Everytime a user clicks on a new page it will then make a call to retrieve the next set of 15 for whatever the model has remembered like if you contintue to paginate when you choose last_name descending it will then continue to paginate through last_names and do the appropriate call.
+
