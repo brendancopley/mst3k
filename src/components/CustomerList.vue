@@ -17,6 +17,7 @@ export default {
       filter: null,
       customers: [],
       TotalCustomers: 1,
+      sortDirection: 'ascending',
       sortedBy: 'created_date',
       errors: []
     }
@@ -87,10 +88,10 @@ export default {
     sortingChanged (ctx) {
       console.log('text sort ', ctx);
       if(ctx.sortDesc == true){
-        var sortDirection = 'descending'
+        this.sortDirection = 'descending'
       }
-      else{
-        var sortDirection = 'ascending'
+      else if (ctx.sortDesc == false){
+        this.sortDirection = 'ascending'
       }
       if(ctx.sortBy !== undefined){
         this.sortedBy = ctx.sortBy;
@@ -101,8 +102,8 @@ export default {
       else{
         this.currentPage = ctx;
       }
-      console.log('test '+ this.sortedBy + '/' + sortDirection + '/' + this.currentPage);
-      axios.get('http://localhost:3000/customer/get/' + this.sortedBy + '/' + sortDirection + '/' + this.currentPage)
+      console.log('test '+ this.sortedBy + '/' + this.sortDirection + '/' + this.currentPage);
+      axios.get('http://localhost:3000/customer/get/' + this.sortedBy + '/' + this.sortDirection + '/' + this.currentPage)
       .then(response => {
         console.log('test response ', response);
         this.customers = response.data.Customers
