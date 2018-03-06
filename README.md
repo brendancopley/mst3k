@@ -19,7 +19,8 @@ Open terminal and cd to the folder where you unzipped the contents
 Type ‘Npm Start’
 
 ### Additional setup for testing:
- **more details coming soon**
+ **more details coming soon** 
+ 
 I've included faker.js to create user data go to http://localhost:3000/customer/generate-fake-data
  90 records will be created
 
