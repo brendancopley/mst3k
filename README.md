@@ -15,10 +15,11 @@ MongoDB community edition and service running
 Port 3000 open
 
 ### How to install:
-Download the Zip and extract into a folder like ‘C:/VueApp’
-Once unzipped make sure MongoDB service is running
-Open terminal and cd to the folder where you unzipped the contents
-Type ‘Npm Start’
+1. Download the Zip and extract into a folder like ‘C:/VueApp’
+2. Once unzipped make sure MongoDB service is running
+3. Open terminal and cd to the folder where you unzipped the contents
+4. Type ‘Npm Start’
+5. Open a browser and type 'localhost:3000'
 
 ### Additional setup for testing:
  **more details coming soon** 
