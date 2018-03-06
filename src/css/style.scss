@@ -1,0 +1,165 @@
+%extend_blackBar {
+  position: absolute;
+  content: "";
+  width: calc(50% - 3em);
+  height: 18px;
+  margin-top: -0.8em;
+  background: black;
+}
+
+
+
+#app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+  .jumboTron{
+    padding-top:60px;
+    background-image: linear-gradient(#002e4b, #0081b6);
+    position:relative;
+  }
+  body {
+    background-image: linear-gradient(45deg, #808080 25%, transparent 25%), linear-gradient(-45deg, #808080 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #808080 75%), linear-gradient(-45deg, transparent 75%, #808080 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    padding: 1.29em;
+    @media screen and (max-width: 415px) {
+      padding: 0;
+      h2 a{
+        display:block;
+      }
+    }
+  }
+  picture img{
+        height: 270px;
+        z-index: 9;
+        position: relative;
+        padding: 1em;
+  }
+  .view{
+    background:white;
+    min-height: calc(100vh - 375px);
+    width:100%;
+    position:relative;
+    padding: 1em 0;
+  }
+  section{
+      display: block;
+      position: absolute;
+      height: 130px;
+      width: 100%;
+      bottom: 0;
+      z-index: 0;
+      background: black;
+      &:before{
+        left: 0;
+        @extend %extend_blackBar;
+      }
+      &:after{
+        right: 0;
+        @extend %extend_blackBar;
+      }
+  }
+
+  table{
+        tbody{
+          tr{
+            &:hover, &:focus, &:active{
+              background-color: rgba(254, 241, 2, .75)!important;
+              cursor:pointer;
+            }
+        }
+        th{
+          border: 1px solid lightgray;
+        }
+        td{
+          border: 1px solid #e9ecef;
+        }
+        @media screen and (max-width: 415px) {
+          %extend_tableCell {
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          td,th{
+            &:nth-child(1){
+              span{
+                max-width: 80px;
+                @extend %extend_tableCell;
+              }
+            }
+            &:nth-child(2){
+              span{
+                max-width: 150px;
+                @extend %extend_tableCell;
+              }
+            }
+            &:nth-child(3){
+              span{
+                max-width: 100px;
+                @extend %extend_tableCell;
+              }
+            }
+            &:nth-child(4){
+              display:none;
+            }
+          }
+        }
+      }
+  }
+
+  .pagination{
+    justify-content: center;
+    li{
+      width:50px;
+    }
+  }
+
+  fieldset{
+    &.b-form-group.form-group{
+      margin: 0.5em 1em!important;
+    }
+  }
+
+  .newCustomer, .editCustomer{
+    fieldset{
+      legend{
+        text-align:right;
+        @media screen and (max-width: 415px) {
+        text-align:left;
+        }
+      }
+    }
+    #first_name{
+      width: 49%;
+      display: inline-block;
+    }
+    #last_name{
+      width: 50%;
+      display: inline-block;
+    }
+  }
+
+  .tableError{
+    padding:0;
+    list-style:none;
+  }
+
+  button[type="submit"]{
+    width: calc(100% - 2em);
+    margin: 0 1em;
+  }
+
+  .errorMessage{
+    color:red;
+    font-weight:600;
+  }
+
+  .successMessage{
+    color:green;
+    font-weight:500;
+  }
