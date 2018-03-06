@@ -39,6 +39,10 @@ My customer validation is happening both on the component vue level (front) and 
 * In my routes I’m also checking that my fields are not empty
 
 When Creating a customer record I am checking to see if there is a duplicate record I am doing this by:
-Mongoose Schema of making email & phone both unique
+* Mongoose Schema of making email & phone both unique
 * Since phone can be empty I applied the property of sparse to be true
 * In my routes I am checking to see if there's already existing values for a record, I felt it was okay that phone, names could be the same but email must always be unique.
+
+When looking up a customer record I only using a single string parameter to find matches
+* I am using an computed observable of when a user types into the input field it will send a get request
+* In the router it will match any field whether it's first_name, last_name, phone or email with that of the query
