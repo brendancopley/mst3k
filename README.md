@@ -9,7 +9,9 @@ This a customer access dashboard for Ethika for creating and looking up customer
 
 ### Assumptions:
 Have Node installed
+
 MongoDB community edition and service running
+
 Port 3000 open
 
 ### How to install:
