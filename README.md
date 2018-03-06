@@ -21,7 +21,8 @@ Type ‘Npm Start’
 ### Additional setup for testing:
  **more details coming soon** 
  
-I've included faker.js to create user data go to http://localhost:3000/customer/generate-fake-data
+I've included faker.js to create user data go to 
+http://localhost:3000/customer/generate-fake-data
  90 records will be created
 
 ### Description:
